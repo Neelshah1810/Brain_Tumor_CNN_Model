@@ -14,8 +14,9 @@ st.set_page_config(page_title="Brain Tumor MRI Classifier", layout="centered")
 # -------------------------------
 @st.cache_resource  # caches model so it doesn’t reload every time
 def load_brain_tumor_model():
-    model = load_model("/Users/neelshah/Downloads/Project_Brain_Tumor_v1/brain_tumor_detection_model_v1_96%_Kaggle.h5")
+    model = load_model("brain_tumor_detection_model_v1_96%_Kaggle.h5")
     return model
+
 
 model = load_brain_tumor_model()
 
